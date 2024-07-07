@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/HazemFelhi/argocd-conf.git
+    repoURL: https://github.com/HazemFelhi/k8s.git
     targetRevision: HEAD
-    path: deployment
+    path: postgresql
   destination:
     server: https://kubernetes.default.svc
-    namespace: coffee-shop
+    namespace: papello
   
   syncPolicy:
     syncOptions:
