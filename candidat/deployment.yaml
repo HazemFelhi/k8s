@@ -2,18 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: front
+  labels:
+    app: front
+    tier: front
 spec:
-  replicas: 1
-  selector:
+  selector: # postgresql Pod Should contain same labels
     matchLabels:
       app: front
   template:
     metadata:
-      labels:
+      labels: # Must match 'Service' and 'Deployment' selectors
         app: front
+        tier: front
     spec:
       containers:
-      - name: front
-        image: hazemfelhi/front:latest
-        ports:
-        - containerPort: 9000
+        - name: front
+          image: hazemfelhi/front:latest
+          ports:
+              - containerPort: 9000
