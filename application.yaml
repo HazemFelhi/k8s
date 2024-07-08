@@ -29,12 +29,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/FullRemoteFactory/Pappello-new.git'
+    repoURL: 'git@github.com:FullRemoteFactory/Pappello-new.git'
     targetRevision: HEAD
     path: pappello-frontend
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: papello
+    namespace: default
   syncPolicy:
     automated:
       prune: true
