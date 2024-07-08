@@ -29,9 +29,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'git@github.com:FullRemoteFactory/Pappello-new.git'
+    repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
-    path: pappello-frontend
+    path: candidat
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
