@@ -34,7 +34,7 @@ spec:
     path: candidat
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: papello
   syncPolicy:
     automated:
       prune: true
