@@ -9,3 +9,5 @@ spec:
   - protocol: TCP
     port: 9000
     targetPort: 9000
+  selector:
+    app: front
