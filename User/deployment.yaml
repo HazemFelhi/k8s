@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user
-          image: hazemfelhi/user:v1
+          image: docker.io/hazemfelhi/user:v1
           imagePullPolicy: "IfNotPresent"  # Replace with your Django Docker image name and tag
           ports:
             - containerPort: 9001  # Adjust port as per your Django app configuration
