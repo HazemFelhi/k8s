@@ -1,0 +1,31 @@
+aapiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user
+spec:
+  replicas: 1  # Adjust replicas as needed
+  selector:
+    matchLabels:
+      app: user
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+        - name: user
+          image: hazemfelhi/user:v1  # Replace with your Django Docker image name and tag
+          ports:
+            - containerPort: 9001  # Adjust port as per your Django app configuration
+          env:
+            - name: POSTGRES_DB
+              value: devdb  # Replace with your PostgreSQL database name
+            - name: POSTGRES_USER
+              value: devuser  # Replace with your PostgreSQL username
+            - name: POSTGRES_PASSWORD
+              value: changeme
+            - name: POSTGRES_HOST
+              value: postgresql  # Replace with your PostgreSQL service name in Kubernetes
+            - name: POSTGRES_PORT
+              value: "5432"  # Adjust if your PostgreSQL uses a different port
+
