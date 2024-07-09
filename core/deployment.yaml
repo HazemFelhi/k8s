@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: core
-          image: docker.io/hazemfelhi/core:v2
+          image: docker.io/hazemfelhi/core:v3
           imagePullPolicy: "IfNotPresent"  # Replace with your Django Docker image name and tag
           ports:
             - containerPort: 9002  # Adjust port as per your Django app configuration
