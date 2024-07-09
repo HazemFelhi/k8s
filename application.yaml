@@ -50,7 +50,7 @@ spec:
   source:
     repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
-    path: user
+    path: User
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: papello
