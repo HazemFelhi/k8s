@@ -140,25 +140,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: escape-db
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/HazemFelhi/k8s.git'
-    targetRevision: HEAD
-    path: escape-db
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: escape
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: escape-back
   namespace: argocd
 spec:
@@ -169,7 +150,7 @@ spec:
     path: escape-back
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: escape
+    namespace: papello
   syncPolicy:
     automated:
       prune: true
