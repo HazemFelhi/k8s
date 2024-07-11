@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: front
-          image: docker.io/hazemfelhi/frontend:vs
+          image: docker.io/hazemfelhi/frontendpapello:v1
           ports:
               - containerPort: 9000
