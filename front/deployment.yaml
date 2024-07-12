@@ -18,6 +18,6 @@ spec:
       containers:
         - name: front
           #image: docker.io/hazemfelhi/papellofront:0.3
-          image: docker.io/hazemfelhi/flutterfront:v1
+          image: docker.io/hazemfelhi/frontpap:v1
           ports:
               - containerPort: 9000
