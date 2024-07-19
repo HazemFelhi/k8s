@@ -6,6 +6,10 @@ metadata:
     app: front
     tier: front
 spec:
+  tolerations:
+  - key: node.kubernetes.io/disk-pressure
+    operator: Exists
+    effect: NoSchedule
   selector: # postgresql Pod Should contain same labels
     matchLabels:
       app: front
