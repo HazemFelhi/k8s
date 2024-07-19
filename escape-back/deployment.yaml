@@ -27,6 +27,7 @@ spec:
           imagePullPolicy: "IfNotPresent"  # Replace with your Django Docker image name and tag
           ports:
             - containerPort: 8000  # Adjust port as per your Django app configuration
+          envFrom:
           - secretRef:
               name: aws-credentials
           env:
