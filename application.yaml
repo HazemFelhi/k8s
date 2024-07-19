@@ -43,103 +43,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: user
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/HazemFelhi/k8s.git'
-    targetRevision: HEAD
-    path: User
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: papello
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: core
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/HazemFelhi/k8s.git'
-    targetRevision: HEAD
-    path: core
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: papello
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: client
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/HazemFelhi/k8s.git'
-    targetRevision: HEAD
-    path: client
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: papello
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: candidat
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/HazemFelhi/k8s.git'
-    targetRevision: HEAD
-    path: candidat
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: papello
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: codes
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/HazemFelhi/k8s.git'
-    targetRevision: HEAD
-    path: codes
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: papello
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-
-
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: escape-back
   namespace: argocd
 spec:
@@ -159,7 +62,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rdis
+  name: redis
   namespace: argocd
 spec:
   project: default
