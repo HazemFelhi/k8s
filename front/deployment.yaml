@@ -23,6 +23,7 @@ spec:
           #image: docker.io/hazemfelhi/frpapello:v1
           #image: docker.io/hazemfelhi/frpapello:v3
           #image: docker.io/hazemfelhi/papfr:vf
-          image: docker.io/hazemfelhi/front_papello
+          #image: docker.io/hazemfelhi/front_papello
+          image: docker.io/hazemfelhi/front_ia
           ports:
               - containerPort: 9000
