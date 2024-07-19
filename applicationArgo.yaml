@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: application
+  name: db
   namespace: argocd
 spec:
-  project: papIA
+  project: default
   source:
     repoURL: https://github.com/HazemFelhi/k8s.git
     targetRevision: HEAD
@@ -24,10 +24,10 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: front
+  name: front_ia
   namespace: argocd
 spec:
-  project: papIA
+  project: default
   source:
     repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
@@ -43,10 +43,10 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: escape-back
+  name: back_ia
   namespace: argocd
 spec:
-  project: papIA
+  project: default
   source:
     repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
@@ -65,7 +65,7 @@ metadata:
   name: redis
   namespace: argocd
 spec:
-  project: papIA
+  project: default
   source:
     repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
