@@ -4,7 +4,7 @@ metadata:
   name: application
   namespace: argocd
 spec:
-  project: default
+  project: papIA
   source:
     repoURL: https://github.com/HazemFelhi/k8s.git
     targetRevision: HEAD
@@ -27,7 +27,7 @@ metadata:
   name: front
   namespace: argocd
 spec:
-  project: default
+  project: papIA
   source:
     repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
@@ -46,7 +46,7 @@ metadata:
   name: escape-back
   namespace: argocd
 spec:
-  project: default
+  project: papIA
   source:
     repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
@@ -65,7 +65,7 @@ metadata:
   name: redis
   namespace: argocd
 spec:
-  project: default
+  project: papIA
   source:
     repoURL: 'https://github.com/HazemFelhi/k8s.git'
     targetRevision: HEAD
