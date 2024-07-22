@@ -14,14 +14,11 @@ spec:
     spec:
       containers:
         - name: app
-          #image: docker.io/hazemfelhi/appback:v2
-          #image: docker.io/hazemfelhi/papello:vf
-          #image: docker.io/hazemfelhi/papelloback
-          #image: docker.io/hazemfelhi/back_papello
           #image: docker.io/hazemfelhi/back_ia:v1
           #image: docker.io/hazemfelhi/ia_back:v1
           #image: docker.io/hazemfelhi/ia_back:v2
-          image: docker.io/hazemfelhi/ia_back:v3
+          #image: docker.io/hazemfelhi/ia_back:v3
+          image: docker.io/hazemfelhi/back_papello_client:vc
           command: ["python"]
           args: ["manage.py", "runserver", "0.0.0.0:8000"]
           imagePullPolicy: "IfNotPresent"  # Replace with your Django Docker image name and tag
