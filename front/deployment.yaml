@@ -17,11 +17,8 @@ spec:
     spec:
       containers:
         - name: front
-          #image: docker.io/hazemfelhi/papfr:vf
-          #image: docker.io/hazemfelhi/front_papello
-          #image: docker.io/hazemfelhi/front_ia:v1
-          #image: docker.io/hazemfelhi/ia_front:v1
           #image: docker.io/hazemfelhi/front_papello_client:vc
-          image: docker.io/hazemfelhi/papello_client_front:vc1
+          #image: docker.io/hazemfelhi/papello_client_front:vc1
+          image: docker.io/hazemfelhi/papello_ia_front:vc
           ports:
               - containerPort: 9000
