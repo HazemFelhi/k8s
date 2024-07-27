@@ -18,7 +18,7 @@ spec:
           #image: docker.io/hazemfelhi/papello_client_back:vc1
           #image: docker.io/hazemfelhi/papello_ia_back:vc
           #image: docker.io/hazemfelhi/client_back:vc
-          image : docker.io/hazemfelhi/backend-ingress:vc
+          image : docker.io/hazemfelhi/backend-ingresss:vc
           command: ["python"]
           args: ["manage.py", "runserver", "0.0.0.0:8000"]
           imagePullPolicy: "IfNotPresent"  # Replace with your Django Docker image name and tag
