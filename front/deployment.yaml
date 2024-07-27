@@ -20,6 +20,7 @@ spec:
           #image: docker.io/hazemfelhi/front_papello_client:vc
           #image: docker.io/hazemfelhi/papello_client_front:vc1
           #image: docker.io/hazemfelhi/papello_ia_front:vc
-          image: docker.io/hazemfelhi/client_front:vc
+          #image: docker.io/hazemfelhi/client_front:vc
+          image: docker.io/hazemfelhi/front-ingress:vc
           ports:
               - containerPort: 9000
