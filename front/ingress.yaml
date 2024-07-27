@@ -11,14 +11,14 @@ spec:
   - hosts: a1c698ea2ea3849d8a9ff29fce9d10b1-1999298649.us-east-1.elb.amazonaws.com
     http:
       paths:
-      - path: /papello
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: front
             port:
               number: 9000
-      - path: /
+      - path: /api
         pathType: Prefix
         backend:  
           service:
