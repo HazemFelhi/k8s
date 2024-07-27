@@ -17,11 +17,11 @@ spec:
           service:
             name: front
             port:
-              number: 9000
+              number: 80
       - path: /
         pathType: Prefix
         backend:  
           service:
-            name: back
+            name: app
             port:
-              number: 8000
+              number: 80
