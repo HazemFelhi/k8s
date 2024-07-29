@@ -23,6 +23,9 @@ spec:
           imagePullPolicy: "IfNotPresent"  # Replace with your Django Docker image name and tag
           ports:
             - containerPort: 8000  # Adjust port as per your Django app configuration
+          volumeMounts:
+            - name: media-volume
+              mountPath: /app/media
           envFrom:
           - secretRef:
               name: aws-credentials
@@ -41,3 +44,7 @@ spec:
               value: redis  # Ensure this matches your Redis service name
             - name: REDIS_PORT
               value: "6379"
+      volumes:
+          - name: media-volume
+            persistentVolumeClaim:
+              claimName: media-pvc
