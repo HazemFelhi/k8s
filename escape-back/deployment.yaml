@@ -21,7 +21,7 @@ spec:
           #image: docker.io/hazemfelhi/final-back
           #image: docker.io/hazemfelhi/back-client:vc3
           #image: docker.io/hazemfelhi/back-clientt:vc4
-          image: docker.io/hazemfelhi/back-end
+          image: docker.io/hazemfelhi/backendclt:vc5
           command: ["python"]
           args: ["manage.py", "runserver", "0.0.0.0:8000"]
           imagePullPolicy: "IfNotPresent"  # Replace with your Django Docker image name and tag
