@@ -48,6 +48,8 @@ spec:
               value: redis  # Ensure this matches your Redis service name
             - name: REDIS_PORT
               value: "6379"
+            - name: DB_HOST
+              value: appdb      
       volumes:
           - name: media-volume
             persistentVolumeClaim:
