@@ -22,6 +22,6 @@ spec:
           #image: docker.io/hazemfelhi/front-ingresss:vc
           #image: docker.io/hazemfelhi/papello-new-front:vc
           #image: docker.io/hazemfelhi/final-front
-          mage: docker.io/hazemfelhi/frontclient:vc
+          image: docker.io/hazemfelhi/frontclient:vc
           ports:
               - containerPort: 9000
