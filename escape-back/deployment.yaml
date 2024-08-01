@@ -49,7 +49,7 @@ spec:
             - name: REDIS_PORT
               value: "6379"
             - name: DB_HOST
-              value: appdb      
+              value: postgresql      
       volumes:
           - name: media-volume
             persistentVolumeClaim:
