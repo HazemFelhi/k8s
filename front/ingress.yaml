@@ -1,28 +1,28 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: front-back-ingress
-  namespace: papello  # Specify the namespace here if needed
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-    nginx.ingress.kubernetes.io/use-regex: "true"
-spec:
-  ingressClassName: nginx  # Specify the Ingress class name
-  rules:
-  - host: a1c698ea2ea3849d8a9ff29fce9d10b1-1999298649.us-east-1.elb.amazonaws.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: front
-            port:
-              number: 9000
-      - path: /api(/|$)(.*)
-        pathType: ImplementationSpecific
-        backend:  
-          service:
-            name: app
-            port:
-              number: 8000
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: front-back-ingress
+#   namespace: papello  # Specify the namespace here if needed
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /$2
+#     nginx.ingress.kubernetes.io/use-regex: "true"
+# spec:
+#   ingressClassName: nginx  # Specify the Ingress class name
+#   rules:
+#   - host: a1c698ea2ea3849d8a9ff29fce9d10b1-1999298649.us-east-1.elb.amazonaws.com
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: front
+#             port:
+#               number: 9000
+#       - path: /api(/|$)(.*)
+#         pathType: ImplementationSpecific
+#         backend:  
+#           service:
+#             name: app
+#             port:
+#               number: 8000
